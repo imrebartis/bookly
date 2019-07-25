@@ -16,8 +16,8 @@ code {
   margin-bottom: 30px;
 }
 
-nav .pagination .page-item .page-link:focus {
-  box-shadow: none;
+nav .pagination .page-item .page-link:not(last-child):focus {
+  margin-right: 5px;
 }
 
 .clickable {
