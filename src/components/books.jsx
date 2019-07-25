@@ -117,7 +117,7 @@ class Books extends Component {
           />
         </aside>
         <div className="main-content">
-          {user && (
+          {user && user.isAdmin && (
             <Link
               to={"/books/new"}
               className="btn btn-primary"
