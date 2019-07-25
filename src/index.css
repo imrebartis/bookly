@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.navbar {
+  margin-bottom: 30px;
+}
+
+nav .pagination .page-item .page-link:focus {
+  box-shadow: none;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.main-content {
+  flex: 0 0 70%;
+  max-width: 70%;
+}
+
+.main-content .table a {
+  color: #005eb8;
+}
+
+.main-content .table a:visited {
+  color: #00264a;
+}
+
+.sidebar {
+  width: 100%;
+  margin-bottom: 6px;
+}
+
+.sidebar .list-group-item:not(:first-child):focus {
+  margin-top: 4px;
+}
+
+.sidebar .list-group-item:not(:last-child):focus {
+  margin-bottom: 4px;
+}
+
+@media (max-width: 768px) {
+  .sidebar .list-group {
+    margin-bottom: 20px;
+  }
+
+  .main-content {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    flex: 0 0 25%;
+    max-width: 25%;
+    margin-right: 16px;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .main-content {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+}
