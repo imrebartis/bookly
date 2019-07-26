@@ -8,6 +8,7 @@ import LoginForm from "./components/loginForm";
 import Logout from "./components/logout";
 import NavBar from "./components/navBar";
 import NotFound from "./components/notFound";
+import Profile from "./components/profile";
 import ProtectedRoute from "./components/common/protectedRoute";
 import RegisterForm from "./components/registerForm";
 import auth from "./services/authService";
@@ -46,6 +47,10 @@ class App extends Component {
               render={props => <Books {...props} user={this.state.user} />}
             />
             <Route path="/customers" component={Customers} />
+            <Route
+              path="/profile"
+              render={props => <Profile {...props} user={this.state.user} />}
+            />
             <Route path="/not-found" component={NotFound} />
             <Redirect from="/" exact to="/books" />
             <Redirect to="/not-found" />

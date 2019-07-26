@@ -108,14 +108,14 @@ class Books extends Component {
     const { totalCount, data: books } = this.getPagedData();
 
     return (
-      <div className="row">
-        <aside className="sidebar">
+      <div className="row" id="content">
+        <div className="sidebar">
           <ListGroup
             items={this.state.genres}
             selectedItem={this.state.selectedGenre}
             onItemSelect={this.handleGenreSelect}
           />
-        </aside>
+        </div>
         <div className="main-content">
           {user && user.isAdmin && (
             <Link
