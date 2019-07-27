@@ -88,9 +88,9 @@ class Books extends Component {
 
     let filtered = allBooks;
     if (searchQuery)
-      filtered = allBooks.filter(m =>
-        m.title.toLowerCase().startsWith(searchQuery.toLowerCase())
-      );
+    filtered = allBooks.filter(b =>
+      b.title.toLowerCase().match(searchQuery.trim().toLowerCase())
+    );
     else if (selectedGenre && selectedGenre._id)
       filtered = allBooks.filter(b => b.genre._id === selectedGenre._id);
 
