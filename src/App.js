@@ -11,6 +11,7 @@ import NotFound from "./components/notFound";
 import Profile from "./components/profile";
 import ProtectedRoute from "./components/common/protectedRoute";
 import RegisterForm from "./components/registerForm";
+import SkipNav from "./components/skipNav";
 import auth from "./services/authService";
 import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
@@ -35,6 +36,7 @@ class App extends Component {
     return (
       <React.Fragment>
         <ToastContainer />
+        <SkipNav />
         <NavBar user={user} collapse={collapse} onClick={this.toggleCollapse} />
         <main className="container">
           <Switch>
